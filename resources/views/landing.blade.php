@@ -169,27 +169,6 @@
             box-shadow: 0 8px 25px rgba(43, 127, 255, 0.4);
         }
 
-        .btn-secondary {
-            background: transparent;
-            color: #2b7fff;
-            padding: 15px 35px;
-            border: 2px solid #2b7fff;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: #2b7fff;
-            color: white;
-            transform: translateY(-2px);
-        }
-
         /* Features Section */
         .features {
             padding: 80px 0;
@@ -469,13 +448,9 @@
                 <h1>LEADMAP-Career</h1>
                 <p>Platform komprehensif untuk penilaian kepemimpinan calon kepala sekolah dengan sistem asesmen terintegrasi yang mengevaluasi Kompetensi Kependidikan, Psikologi, dan Komitmen Pendidikan terintegrasi AI.</p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn-primary">
-                        <i class="fas fa-sign-in-alt"></i>
-                        Login
-                    </a>
-                    <a href="#" class="btn-secondary">
-                        <i class="fas fa-user-plus"></i>
-                        Sign Up
+                    <a href="https://platform.leadmap-career.com" class="btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Get Started
                     </a>
                 </div>
             </div>
@@ -580,88 +555,24 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>LEADMAP-Career</h3>
-                    <p>Platform penilaian kepemimpinan yang komprehensif untuk calon kepala sekolah dengan teknologi terdepan.</p>
+                    <p>Platform inovatif untuk pengembangan kepemimpinan pendidikan melalui asesmen komprehensif berbasis AI.</p>
                 </div>
-
-                <div class="footer-section">
-                    <h3>Layanan</h3>
-                    <a href="#">Asesmen Kependidikan</a>
-                    <a href="#">Asesmen Psikologi</a>
-                    <a href="#">Analisis Digital</a>
-                    <a href="#">Laporan Hasil</a>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Bantuan</h3>
-                    <a href="#">Pusat Bantuan</a>
-                    <a href="#">FAQ</a>
-                    <a href="#">Panduan</a>
-                    <a href="#">Kontak Support</a>
-                </div>
-
                 <div class="footer-section">
                     <h3>Kontak</h3>
-                    <p>Email: info@leadmap-career.id</p>
-                    <p>Telepon: (021) 1234-5678</p>
-                    <p>WhatsApp: +62 812-3456-7890</p>
+                    <p>Email: support@leadmap-career.com</p>
+                    <p>Telepon: +62 812-3456-7890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Ikuti Kami</h3>
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2025 LEADMAP-Career. Semua hak dilindungi.</p>
             </div>
         </div>
     </footer>
-
-    <script>
-        // Smooth scrolling untuk navigasi
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 30px rgba(43, 127, 255, 0.15)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 2px 20px rgba(43, 127, 255, 0.1)';
-            }
-        });
-
-        // Animasi card saat scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // Observe semua card
-        document.querySelectorAll('.feature-card, .service-card').forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
-    </script>
 </body>
 </html>
