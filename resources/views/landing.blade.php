@@ -450,6 +450,7 @@
                     <img src="{{ asset('images/bima.png') }}" alt="Icon 1" style="width: 120px; height: 60px;">
                     <img src="{{ asset('images/diktisaintek.png') }}" alt="Icon 2" style="width: 60px; height: 60px;">
                     <img src="{{ asset('images/umlogo.png') }}" alt="Icon 3" style="width: 60px; height: 60px;">
+                    <img src="{{ asset('images/kemendikdasmen_ramah.png') }}" alt="Icon 1" style="width: 120px; height: 60px;">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#aktivitas">Aktivitas</a></li>
