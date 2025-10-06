@@ -498,7 +498,7 @@
             <p class="section-subtitle">Akses berbagai fitur dan layanan untuk mendukung proses penilaian kepemimpinan</p>
 
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card fitur">
                     <div class="service-icon">
                         <i class="fas fa-info-circle"></i>
                     </div>
@@ -506,7 +506,7 @@
                     <p>Panduan lengkap tahapan asesmen</p>
                 </div>
 
-                <div class="service-card">
+                <div class="service-card panduan">
                     <div class="service-icon">
                         <i class="fas fa-book"></i>
                     </div>
@@ -574,5 +574,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const fiturCard = document.querySelector(".service-card.fitur");
+    const panduanCard = document.querySelector(".service-card.panduan");
+
+    if (fiturCard) {
+        fiturCard.addEventListener("click", function() {
+            window.open("https://drive.google.com/drive/u/1/folders/17Mv-A00zmckKfx9kXNjmT1ajmz-metxO", "_blank");
+        });
+    }
+
+    if (panduanCard) {
+        panduanCard.addEventListener("click", function() {
+            window.open("https://drive.google.com/drive/u/1/folders/1_ZBSEhUMxbPG-RrDWQAIMCTuPfLk85V6", "_blank");
+        });
+    }
+});
+</script>
+
 </body>
 </html>
