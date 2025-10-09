@@ -498,7 +498,7 @@
             <p class="section-subtitle">Akses berbagai fitur dan layanan untuk mendukung proses penilaian kepemimpinan</p>
 
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" onclick="openPdfModal('{{ asset('pdf/Prototipe_Platform.pdf') }}', 'Deskripsi Fitur')">
                     <div class="service-icon">
                         <i class="fas fa-info-circle"></i>
                     </div>
@@ -506,7 +506,8 @@
                     <p>Panduan lengkap tahapan asesmen</p>
                 </div>
 
-                <div class="service-card">
+    <!-- Card Buku Panduan dengan PDF -->
+                <div class="service-card" onclick="openPdfModal('{{ asset('pdf/SOP_LEADMAP-Career.pdf') }}', 'Buku Panduan')">
                     <div class="service-icon">
                         <i class="fas fa-book"></i>
                     </div>
