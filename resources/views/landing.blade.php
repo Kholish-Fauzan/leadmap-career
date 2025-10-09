@@ -594,6 +594,189 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 </script>
+<!-- PDF MODAL -->
+<div id="pdfModal" class="pdf-modal">
+    <div class="pdf-modal-content">
+        <div class="pdf-modal-header">
+            <h3 id="pdfTitle">Dokumen PDF</h3>
+            <span class="pdf-close" onclick="closePdfModal()">&times;</span>
+        </div>
+        <div class="pdf-modal-body">
+            <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+        </div>
+        <div class="pdf-modal-footer">
+            <button class="btn-primary" onclick="downloadPdf()">
+                <i class="fas fa-download"></i> Download PDF
+            </button>
+            <button class="btn-secondary" onclick="closePdfModal()">
+                <i class="fas fa-times"></i> Tutup
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+/* PDF Modal Styles */
+.pdf-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s ease;
+}
+
+.pdf-modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 2% auto;
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+    animation: slideDown 0.3s ease;
+}
+
+.pdf-modal-header {
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #2b7fff, #1e6aff);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pdf-modal-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.pdf-close {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.pdf-close:hover {
+    color: #ff6b6b;
+}
+
+.pdf-modal-body {
+    flex: 1;
+    padding: 0;
+    overflow: hidden;
+}
+
+.pdf-modal-body iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.pdf-modal-footer {
+    padding: 15px 30px;
+    background: #f8f9fa;
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.pdf-modal-footer .btn-primary,
+.pdf-modal-footer .btn-secondary {
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .pdf-modal-content {
+        width: 95%;
+        height: 95vh;
+        margin: 2.5% auto;
+    }
+
+    .pdf-modal-header {
+        padding: 15px 20px;
+    }
+
+    .pdf-modal-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .pdf-modal-footer {
+        flex-direction: column;
+    }
+}
+</style>
+
+<script>
+// PDF Modal Functions
+let currentPdfUrl = '';
+
+function openPdfModal(pdfUrl, title) {
+    currentPdfUrl = pdfUrl;
+    document.getElementById('pdfModal').style.display = 'block';
+    document.getElementById('pdfTitle').textContent = title;
+    document.getElementById('pdfViewer').src = pdfUrl;
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+function closePdfModal() {
+    document.getElementById('pdfModal').style.display = 'none';
+    document.getElementById('pdfViewer').src = '';
+    document.body.style.overflow = 'auto'; // Restore scrolling
+}
+
+function downloadPdf() {
+    const link = document.createElement('a');
+    link.href = currentPdfUrl;
+    link.download = currentPdfUrl.split('/').pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('pdfModal');
+    if (event.target == modal) {
+        closePdfModal();
+    }
+}
+
+// Close modal with ESC key
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closePdfModal();
+    }
+});
+</script>
 
 </body>
 </html>
