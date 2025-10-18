@@ -1,26 +1,42 @@
 <?php
 
-   use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Route;
 
-   /*
-   |--------------------------------------------------------------------------
-   | Web Routes
-   |--------------------------------------------------------------------------
-   */
+/*
+|--------------------------------------------------------------------------
+| Web Routes - LEADMAP-Career
+|--------------------------------------------------------------------------
+*/
 
-   Route::get('/', function () {
-       return view('landing');
-   });
+// Landing Page
+Route::get('/', function () {
+    return view('landing');
+})->name('home');
 
-   // Route tambahan untuk navigasi
-   Route::get('/aktivitas', function () {
-       return view('landing'); // Sementara redirect ke landing
-   });
+// Halaman Berita Terbaru
+Route::get('/berita', function () {
+    return view('berita');
+})->name('berita');
 
-   Route::get('/contact', function () {
-       return view('landing'); // Sementara redirect ke landing
-   });
+// Halaman Dokumentasi Kegiatan
+Route::get('/dokumentasi', function () {
+    return view('dokumentasi');
+})->name('dokumentasi');
 
-   Route::get('/about', function () {
-       return view('landing'); // Sementara redirect ke landing
-   });
+// Halaman Pusat Bantuan
+Route::get('/pusat-bantuan', function () {
+    return view('pusat-bantuan');
+})->name('pusat-bantuan');
+
+// Redirect old routes (jika ada)
+Route::get('/aktivitas', function () {
+    return redirect('/#aktivitas');
+});
+
+Route::get('/contact', function () {
+    return redirect('/#contact');
+});
+
+Route::get('/about', function () {
+    return redirect('/#about');
+});

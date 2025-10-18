@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -167,6 +168,27 @@
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(43, 127, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #2b7fff;
+            padding: 15px 35px;
+            border: 2px solid #2b7fff;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #2b7fff;
+            color: white;
+            transform: translateY(-2px);
         }
 
         /* Features Section */
@@ -415,21 +437,31 @@
         }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <div class="logo-section">
-                    <img src="{{ asset('images/bima.png') }}" alt="Icon 1" style="width: 120px; height: 60px;">
-                    <img src="{{ asset('images/diktisaintek.png') }}" alt="Icon 2" style="width: 60px; height: 60px;">
-                    <img src="{{ asset('images/umlogo.png') }}" alt="Icon 3" style="width: 60px; height: 60px;">
-                    <img src="{{ asset('images/kemendikdasmen_ramah.png') }}" alt="Icon 1" style="width: 120px; height: 60px;">
+                    <img src="{{ asset('images/bima.png') }}" alt="BIMA" style="width: 120px; height: 60px;">
+                    <img src="{{ asset('images/diktisaintek.png') }}" alt="Diktisaintek"
+                        style="width: 60px; height: 60px;">
+                    <img src="{{ asset('images/umlogo.png') }}" alt="UM Logo" style="width: 60px; height: 60px;">
+                    <img src="{{ asset('images/kemendikdasmen_ramah.png') }}" alt="Kemendikdasmen"
+                        style="width: 120px; height: 60px;">
                 </div>
                 <ul class="nav-links">
                     <li><a href="#aktivitas">Aktivitas</a></li>
@@ -446,7 +478,9 @@
         <div class="container">
             <div class="hero-content">
                 <h1>LEADMAP-Career</h1>
-                <p>Platform komprehensif untuk penilaian kepemimpinan calon kepala sekolah dengan sistem asesmen terintegrasi yang mengevaluasi Kompetensi Kependidikan, Psikologi, dan Komitmen Pendidikan terintegrasi AI.</p>
+                <p>Platform komprehensif untuk penilaian kepemimpinan calon kepala sekolah dengan sistem asesmen
+                    terintegrasi yang mengevaluasi Kompetensi Kependidikan, Psikologi, dan Komitmen Pendidikan
+                    terintegrasi AI.</p>
                 <div class="cta-buttons">
                     <a href="https://platform.leadmap-career.com" class="btn-primary">
                         <i class="fas fa-rocket"></i>
@@ -461,7 +495,8 @@
     <section class="features">
         <div class="container">
             <h2 class="section-title">Fitur Penilaian Utama</h2>
-            <p class="section-subtitle">Tiga tahapan asesmen komprehensif untuk mengevaluasi kelayakan calon kepala sekolah</p>
+            <p class="section-subtitle">Tiga tahapan asesmen komprehensif untuk mengevaluasi kelayakan calon kepala
+                sekolah</p>
 
             <div class="features-grid">
                 <div class="feature-card">
@@ -469,7 +504,8 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <h3>Asesmen Kependidikan</h3>
-                    <p>Evaluasi kompetensi profesional dan pedagogik melalui 30 soal multiple choice dalam waktu 15 menit untuk mengukur pemahaman tentang manajemen pendidikan dan pembelajaran.</p>
+                    <p>Evaluasi kompetensi profesional dan pedagogik melalui 30 soal multiple choice dalam waktu 15
+                        menit untuk mengukur pemahaman tentang manajemen pendidikan dan pembelajaran.</p>
                 </div>
 
                 <div class="feature-card">
@@ -477,7 +513,8 @@
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3>Asesmen Psikologi</h3>
-                    <p>Penilaian kepribadian dan karakteristik psikologis melalui 30 soal multiple choice dalam 15 menit untuk mengevaluasi kesiapan mental kepemimpinan.</p>
+                    <p>Penilaian kepribadian dan karakteristik psikologis melalui 30 soal multiple choice dalam 15 menit
+                        untuk mengevaluasi kesiapan mental kepemimpinan.</p>
                 </div>
 
                 <div class="feature-card">
@@ -485,7 +522,8 @@
                         <i class="fas fa-share-alt"></i>
                     </div>
                     <h3>Analisis Konten Digital</h3>
-                    <p>Evaluasi komitmen terhadap pengembangan pendidikan melalui analisis konten media sosial untuk mengukur konsistensi visi pendidikan calon kepala sekolah.</p>
+                    <p>Evaluasi komitmen terhadap pengembangan pendidikan melalui analisis konten media sosial untuk
+                        mengukur konsistensi visi pendidikan calon kepala sekolah.</p>
                 </div>
             </div>
         </div>
@@ -495,10 +533,13 @@
     <section class="services">
         <div class="container">
             <h2 class="section-title">Layanan Platform</h2>
-            <p class="section-subtitle">Akses berbagai fitur dan layanan untuk mendukung proses penilaian kepemimpinan</p>
+            <p class="section-subtitle">Akses berbagai fitur dan layanan untuk mendukung proses penilaian kepemimpinan
+            </p>
 
             <div class="services-grid">
-                <div class="service-card" onclick="openPdfModal('{{ asset('pdf/Prototipe_Platform.pdf') }}', 'Deskripsi Fitur')">
+                <!-- Card Deskripsi Fitur dengan PDF -->
+                <div class="service-card"
+                    onclick="openPdfModal('{{ asset('pdf/Prototipe_Platform.pdf') }}', 'Deskripsi Fitur')">
                     <div class="service-icon">
                         <i class="fas fa-info-circle"></i>
                     </div>
@@ -506,8 +547,9 @@
                     <p>Panduan lengkap tahapan asesmen</p>
                 </div>
 
-    <!-- Card Buku Panduan dengan PDF -->
-                <div class="service-card" onclick="openPdfModal('{{ asset('pdf/SOP_LEADMAP-Career.pdf') }}', 'Buku Panduan')">
+                <!-- Card Buku Panduan dengan PDF -->
+                <div class="service-card"
+                    onclick="openPdfModal('{{ asset('pdf/SOP_LEADMAP-Career.pdf') }}', 'Buku Panduan')">
                     <div class="service-icon">
                         <i class="fas fa-book"></i>
                     </div>
@@ -515,7 +557,8 @@
                     <p>Petunjuk teknis penggunaan platform</p>
                 </div>
 
-                <div class="service-card">
+                <!-- Card Berita Terbaru dengan Link -->
+                <div class="service-card" onclick="location.href='{{ url('/berita') }}'">
                     <div class="service-icon">
                         <i class="fas fa-newspaper"></i>
                     </div>
@@ -523,7 +566,8 @@
                     <p>Update informasi dan pengumuman</p>
                 </div>
 
-                <div class="service-card">
+                <!-- Card Pusat Bantuan dengan Link -->
+                <div class="service-card" onclick="location.href='{{ url('/pusat-bantuan') }}'">
                     <div class="service-icon">
                         <i class="fas fa-life-ring"></i>
                     </div>
@@ -531,7 +575,8 @@
                     <p>Dukungan teknis dan FAQ</p>
                 </div>
 
-                <div class="service-card">
+                <!-- Card Dokumentasi Kegiatan dengan Link -->
+                <div class="service-card" onclick="location.href='{{ url('/dokumentasi') }}'">
                     <div class="service-icon">
                         <i class="fas fa-camera"></i>
                     </div>
@@ -556,227 +601,279 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>LEADMAP-Career</h3>
-                    <p>Platform inovatif untuk pengembangan kepemimpinan pendidikan melalui asesmen komprehensif berbasis AI.</p>
+                    <p>Platform inovatif untuk pengembangan kepemimpinan pendidikan melalui asesmen komprehensif
+                        berbasis AI.</p>
                 </div>
+
+                <div class="footer-section">
+                    <h3>Layanan</h3>
+                    <a href="{{ url('/') }}#features">Asesmen Kependidikan</a>
+                    <a href="{{ url('/') }}#features">Asesmen Psikologi</a>
+                    <a href="{{ url('/') }}#features">Analisis Digital</a>
+                    <a href="{{ url('/berita') }}">Berita Terbaru</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Bantuan</h3>
+                    <a href="{{ url('/pusat-bantuan') }}">Pusat Bantuan</a>
+                    <a href="{{ url('/pusat-bantuan') }}#faq">FAQ</a>
+                    <a href="{{ url('/dokumentasi') }}">Dokumentasi Kegiatan</a>
+                    <a href="mailto:support@leadmap-career.com">Kontak Support</a>
+                </div>
+
                 <div class="footer-section">
                     <h3>Kontak</h3>
                     <p>Email: support@leadmap-career.com</p>
                     <p>Telepon: +62 812-3456-7890</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Ikuti Kami</h3>
-                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
-                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
-                    <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <p>WhatsApp: +62 812-3456-7890</p>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 LEADMAP-Career. Semua hak dilindungi.</p>
+                <p>&copy; 2024 LEADMAP-Career. Semua hak dilindungi.</p>
             </div>
         </div>
     </footer>
 
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const fiturCard = document.querySelector(".service-card.fitur");
-    const panduanCard = document.querySelector(".service-card.panduan");
-
-    if (fiturCard) {
-        fiturCard.addEventListener("click", function() {
-            window.open("https://drive.google.com/drive/u/1/folders/17Mv-A00zmckKfx9kXNjmT1ajmz-metxO", "_blank");
+        // Smooth scrolling untuk navigasi
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-    }
 
-    if (panduanCard) {
-        panduanCard.addEventListener("click", function() {
-            window.open("https://drive.google.com/drive/u/1/folders/1_ZBSEhUMxbPG-RrDWQAIMCTuPfLk85V6", "_blank");
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 30px rgba(43, 127, 255, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(43, 127, 255, 0.1)';
+            }
         });
-    }
-});
-</script>
-<!-- PDF MODAL -->
-<div id="pdfModal" class="pdf-modal">
-    <div class="pdf-modal-content">
-        <div class="pdf-modal-header">
-            <h3 id="pdfTitle">Dokumen PDF</h3>
-            <span class="pdf-close" onclick="closePdfModal()">&times;</span>
-        </div>
-        <div class="pdf-modal-body">
-            <iframe id="pdfViewer" src="" frameborder="0"></iframe>
-        </div>
-        <div class="pdf-modal-footer">
-            <button class="btn-primary" onclick="downloadPdf()">
-                <i class="fas fa-download"></i> Download PDF
-            </button>
-            <button class="btn-secondary" onclick="closePdfModal()">
-                <i class="fas fa-times"></i> Tutup
-            </button>
+
+        // Animasi card saat scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe semua card
+        document.querySelectorAll('.feature-card, .service-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+    <!-- PDF MODAL -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfTitle">Dokumen PDF</h3>
+                <span class="pdf-close" onclick="closePdfModal()">&times;</span>
+            </div>
+            <div class="pdf-modal-body">
+                <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+            </div>
+            <div class="pdf-modal-footer">
+                <button class="btn-primary" onclick="downloadPdf()">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+                <button class="btn-secondary" onclick="closePdfModal()">
+                    <i class="fas fa-times"></i> Tutup
+                </button>
+            </div>
         </div>
     </div>
-</div>
 
-<style>
-/* PDF Modal Styles */
-.pdf-modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    animation: fadeIn 0.3s ease;
-}
+    <style>
+        /* PDF Modal Styles */
+        .pdf-modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            animation: fadeIn 0.3s ease;
+        }
 
-.pdf-modal-content {
-    position: relative;
-    background-color: #fff;
-    margin: 2% auto;
-    width: 90%;
-    max-width: 1200px;
-    height: 90vh;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
-    animation: slideDown 0.3s ease;
-}
+        .pdf-modal-content {
+            position: relative;
+            background-color: #fff;
+            margin: 2% auto;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+            animation: slideDown 0.3s ease;
+        }
 
-.pdf-modal-header {
-    padding: 20px 30px;
-    background: linear-gradient(135deg, #2b7fff, #1e6aff);
-    color: white;
-    border-radius: 15px 15px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .pdf-modal-header {
+            padding: 20px 30px;
+            background: linear-gradient(135deg, #2b7fff, #1e6aff);
+            color: white;
+            border-radius: 15px 15px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.pdf-modal-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-}
+        .pdf-modal-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
 
-.pdf-close {
-    color: white;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: color 0.3s;
-}
+        .pdf-close {
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
 
-.pdf-close:hover {
-    color: #ff6b6b;
-}
+        .pdf-close:hover {
+            color: #ff6b6b;
+        }
 
-.pdf-modal-body {
-    flex: 1;
-    padding: 0;
-    overflow: hidden;
-}
+        .pdf-modal-body {
+            flex: 1;
+            padding: 0;
+            overflow: hidden;
+        }
 
-.pdf-modal-body iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
+        .pdf-modal-body iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
 
-.pdf-modal-footer {
-    padding: 15px 30px;
-    background: #f8f9fa;
-    border-radius: 0 0 15px 15px;
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
+        .pdf-modal-footer {
+            padding: 15px 30px;
+            background: #f8f9fa;
+            border-radius: 0 0 15px 15px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
 
-.pdf-modal-footer .btn-primary,
-.pdf-modal-footer .btn-secondary {
-    padding: 12px 25px;
-    font-size: 1rem;
-}
+        .pdf-modal-footer .btn-primary,
+        .pdf-modal-footer .btn-secondary {
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
+            to {
+                opacity: 1;
+            }
+        }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .pdf-modal-content {
-        width: 95%;
-        height: 95vh;
-        margin: 2.5% auto;
-    }
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
 
-    .pdf-modal-header {
-        padding: 15px 20px;
-    }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
-    .pdf-modal-header h3 {
-        font-size: 1.2rem;
-    }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .pdf-modal-content {
+                width: 95%;
+                height: 95vh;
+                margin: 2.5% auto;
+            }
 
-    .pdf-modal-footer {
-        flex-direction: column;
-    }
-}
-</style>
+            .pdf-modal-header {
+                padding: 15px 20px;
+            }
 
-<script>
-// PDF Modal Functions
-let currentPdfUrl = '';
+            .pdf-modal-header h3 {
+                font-size: 1.2rem;
+            }
 
-function openPdfModal(pdfUrl, title) {
-    currentPdfUrl = pdfUrl;
-    document.getElementById('pdfModal').style.display = 'block';
-    document.getElementById('pdfTitle').textContent = title;
-    document.getElementById('pdfViewer').src = pdfUrl;
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-}
+            .pdf-modal-footer {
+                flex-direction: column;
+            }
+        }
+    </style>
 
-function closePdfModal() {
-    document.getElementById('pdfModal').style.display = 'none';
-    document.getElementById('pdfViewer').src = '';
-    document.body.style.overflow = 'auto'; // Restore scrolling
-}
+    <script>
+        // PDF Modal Functions
+        let currentPdfUrl = '';
 
-function downloadPdf() {
-    const link = document.createElement('a');
-    link.href = currentPdfUrl;
-    link.download = currentPdfUrl.split('/').pop();
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
+        function openPdfModal(pdfUrl, title) {
+            currentPdfUrl = pdfUrl;
+            document.getElementById('pdfModal').style.display = 'block';
+            document.getElementById('pdfTitle').textContent = title;
+            document.getElementById('pdfViewer').src = pdfUrl;
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
 
-// Close modal when clicking outside
-window.onclick = function(event) {
-    const modal = document.getElementById('pdfModal');
-    if (event.target == modal) {
-        closePdfModal();
-    }
-}
+        function closePdfModal() {
+            document.getElementById('pdfModal').style.display = 'none';
+            document.getElementById('pdfViewer').src = '';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
 
-// Close modal with ESC key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closePdfModal();
-    }
-});
-</script>
+        function downloadPdf() {
+            const link = document.createElement('a');
+            link.href = currentPdfUrl;
+            link.download = currentPdfUrl.split('/').pop();
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
 
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('pdfModal');
+            if (event.target == modal) {
+                closePdfModal();
+            }
+        }
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closePdfModal();
+            }
+        });
+    </script>
 </body>
+
 </html>
